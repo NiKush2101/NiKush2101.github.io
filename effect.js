@@ -5,7 +5,7 @@ $(window).load(function(){
 $('document').ready(function(){
 		var vw;
 		$(window).resize(function(){
-			 vw = $(window).width()/2;
+			vw = $(window).width()/2;
 			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
 			$('#b11').animate({top:240, left: vw-350},500);
 			$('#b22').animate({top:240, left: vw-250},500);
@@ -109,11 +109,6 @@ $('document').ready(function(){
 		$('.balloon-border').animate({top:-500},8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b3').addClass('balloons-rotate-behaviour-two');
-		// $('#b4').addClass('balloons-rotate-behaviour-one');
-		// $('#b5').addClass('balloons-rotate-behaviour-one');
-		// $('#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b7').addClass('balloons-rotate-behaviour-one');
 		loopOne();
 		loopTwo();
 		loopThree();
@@ -121,12 +116,11 @@ $('document').ready(function(){
 		loopFive();
 		loopSix();
 		loopSeven();
-		
 		//$(this).fadeOut('slow').delay(5000).promise().done(function(){
 		$(this).fadeOut('slow').delay(50).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
-	});	
+	});
 
 	$('#cake_fadein').click(function(){
 		$('.cake').fadeIn('slow');
@@ -143,9 +137,8 @@ $('document').ready(function(){
 		});
 	});
 
-		
 	$('#wish_message').click(function(){
-		 vw = $(window).width()/2;
+		vw = $(window).width()/2;
 
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
 		$('#b1').attr('id','b11');
@@ -166,78 +159,25 @@ $('document').ready(function(){
 		$('.balloons h2').fadeIn(3000);
 		//$(this).fadeOut('slow').delay(3000).promise().done(function(){
 		$(this).fadeOut('slow').delay(30).promise().done(function(){
-			//$('#story').fadeIn('slow');
 			$('#greeting-envelope').fadeIn('slow');
 		});
 	});
 
-// 	$('#greeting-envelope').click(function(){
-// 			$(this).fadeOut('slow');
-// 			$('.cake').fadeOut('fast').promise().done(function(){
-				
+	$('#greeting-envelope').click(function() {
+	$('#greeting-envelope').fadeOut('slow');
+	$('#card').fadeIn('slow');
+	$('#play-video').fadeIn('slow');
+	$(this).fadeOut('slow').delay(60).promise().done
+	});
 
-// 	});
-// });
-
-$('#greeting-envelope').click(function() {
-  $('#greeting-envelope').fadeOut('slow');
-  $('#card').fadeIn('slow');
-  $('#play-video').fadeIn('slow');
-  $(this).fadeOut('slow').delay(60).promise().done
-});
-
-
-$('#play-video').click(function () {
-	
-    $('#video-section').fadeIn('slow');
-    $('#birthday-video')[0].play();
-});
-
-
-
-
-
-
-	// $('#story').click(function(){
-	// 	$(this).fadeOut('slow');
-	// 	$('.cake').fadeOut('fast').promise().done(function(){
-	// 		$('.message').fadeIn('slow');
-	// 	});
-
-	// 	var i;
-
-	// 	function msgLoop (i) {
-	// 		$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
-	// 		i=i+1;
-	// 		$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
-	// 		if(i==50){
-	// 			$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-	// 				$('.cake').fadeIn('fast');
-	// 			});
-				
-	// 		}
-	// 		else{
-	// 			msgLoop(i);
-	// 		}			
-
-	// 	});
-	// 		// body...
-	// 	}
-		
-	// 	msgLoop(0);
-		
-	// });
-
-
-
+	$('#play-video').click(function () {
+		$('#play-video').fadeOut('slow');
+		$('#video-section').fadeIn('slow');
+		$('#birthday-video')[0].play();
+	});
 });
 
 function closeCard() {
   $('#card').fadeOut('slow', function() {
   });
 }
-
-
-
-
-//alert('hello');
