@@ -165,19 +165,17 @@ $('document').ready(function(){
 
 	$('#greeting-envelope').click(function() {
 	$('#greeting-envelope').fadeOut('slow');
-	$('#card').fadeIn('slow');
+	$('.card').fadeIn('slow');
+	$('.cobertura').fadeOut('slow');
 	$('#play-video').fadeIn('slow');
 	$(this).fadeOut('slow').delay(60).promise().done
 	});
 
 	$('#play-video').click(function () {
+		$('.card').fadeOut('slow');
 		$('#play-video').fadeOut('slow');
+		$('.cobertura').fadeOut('slow');
 		$('#video-section').fadeIn('slow');
 		$('#birthday-video')[0].play();
 	});
 });
-
-function closeCard() {
-  $('#card').fadeOut('slow', function() {
-  });
-}
