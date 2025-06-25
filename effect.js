@@ -178,4 +178,6 @@ $('document').ready(function(){
 		$('#video-section').fadeIn('slow');
 		$('#birthday-video')[0].play();
 	});
+
+
 });
