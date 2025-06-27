@@ -175,10 +175,12 @@ $('document').ready(function(){
 		$('.card').fadeOut('slow');
 		$('#play-video').fadeOut('slow');
 		$('#video-section').fadeIn('slow');
+		$('.song')[0].pause();
 		$('#birthday-video')[0].play();
 	});
 
 	$('#birthday-video').on('ended', function () {
+		$('.song')[0].play();
 		$('#video-section').fadeOut('slow');
 		$('.cobertura').fadeIn('slow');
 		$('#wishonboard').fadeIn('slow');
