@@ -174,10 +174,18 @@ $('document').ready(function(){
 	$('#play-video').click(function () {
 		$('.card').fadeOut('slow');
 		$('#play-video').fadeOut('slow');
-		$('.cobertura').fadeOut('slow');
 		$('#video-section').fadeIn('slow');
 		$('#birthday-video')[0].play();
 	});
 
+	$('#birthday-video').on('ended', function () {
+		$('#video-section').fadeOut('slow');
+		$('.cobertura').fadeIn('slow');
+		$('#wishonboard').fadeIn('slow');
+	});
+
+	$('#wishonboard').click(function(){
+		window.open("https://app.mural.co/t/wishnimisha3614/m/wishnimisha3614/1750995419757/c828c514094ebdf1444d61d267a1f4127ba4a933","_blank");
+	});
 
 });
